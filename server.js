@@ -16,11 +16,20 @@ app.get('/users', function(req, res) {
 
 app.get('/users/:id', function(req, res) {
     console.log(req.params.id);
+    const username = req.params.id;
+    const mockUsername = 'frankie';
+    if (username === mockUsername) {
     res.json({
         success:true,
         message:'got one user',
         user: req.params.id
     });
+} else {
+    res.json({
+        success: false,
+        message: 'you are not who we are expecting'
+    });
+}
 });
 
 app.post('/login', function(req, res) {
