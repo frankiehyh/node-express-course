@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const mockUserData = [{name: 'Mark'}, {name: Jill}];
+const mockUserData = [{name: 'Mark'}, {name: 'Jill'}];
 
 app.get('/Users', function(req, res) {
     res.json({
