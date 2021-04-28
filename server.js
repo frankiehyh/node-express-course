@@ -11,6 +11,10 @@ app.get('/users', function(req, res) {
     });
 });
 
+app.get('/test', function(req, res) {
+    console.log("This is merely a test");
+});
+
 app.listen(8000, function() {
     console.log("Server is running");
 });
